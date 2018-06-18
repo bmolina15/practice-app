@@ -1,0 +1,8 @@
+.dash{
+    background-color: coral;
+    width: 80%;
+    position: absolute;
+    right: 0;
+    overflow: auto;
+    height:100% ;
+}

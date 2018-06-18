@@ -1,0 +1,13 @@
+<h3>FILMS</h3>
+<ul *ngIf="films" >
+  <li *ngFor="let film of films"  >
+  <ul class="film">
+    
+    <li class="title">{{film?.title}}</li>
+    <li >{{film?.description}}</li>
+    <li>Director: {{film?.director}}</li>
+    <li>Producer: {{film?.producer}}</li>
+  
+  </ul>
+ 
+</li></ul>

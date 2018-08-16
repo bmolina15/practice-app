@@ -11,22 +11,32 @@ export class FilmsComponent implements OnInit {
 
   constructor(private apiService: ApiService) { }
 
-  films: any;
+  films: Array<any>;
+  filteredFilms: Array<any>;
+
+  isSearching: boolean = false;
 
   ngOnInit() {
+    this.films = [];
+    this.filteredFilms = [];
 
     this.getFilms();
 
   }
 
+  showText(event) {
+    this.isSearching = true;
+    this.filteredFilms = this.films.filter(film => film.title.toLowerCase().includes(event.toLowerCase()));
+  }
+
   getFilms() {
-    
     this.apiService.getAllFilms().subscribe(res => 
-      // console.log(res);
-      this.films = res
+      // console.log(res)
+      res.map((f)=> {
+        this.films.push(f);
+      //this.filteredFilms.push(f);
+      })
     );
-    
-    console.log(this.films);
   }
 
 }

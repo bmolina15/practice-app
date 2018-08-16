@@ -7,6 +7,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
 import { FilmsComponent } from './films/films.component';
+import { PeopleComponent } from './people/people.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,13 @@ import { FilmsComponent } from './films/films.component';
     SidebarComponent,
     DashboardComponent,
     SearchbarComponent,
-    FilmsComponent
+    FilmsComponent,
+    PeopleComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

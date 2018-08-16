@@ -1,0 +1,16 @@
+
+<app-searchbar (showT)="searchedPeople($event)"></app-searchbar>
+
+<h3>People</h3>
+<ul *ngIf="people" >
+  <li *ngFor="let p of (!isSearching) ? people : filteredPeople"  >
+  <ul class="p">
+    
+    <li class="p">{{p?.name}}</li>
+    <li >{{p?.gender}}</li>
+    <li>Age: {{p?.age}}</li>
+    
+  
+  </ul>
+ 
+</li></ul>
